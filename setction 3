@@ -23,6 +23,43 @@ The Random Forest classifier was trained in parallel using texture and size feat
 A real-time fruit ripeness detection system was implemented using a live camera feed, where the trained CNN model is employed to classify incoming fruit images as ripe or unripe. The system leverages a pre-trained CNN model that processes the color of the fruit, and the Random Forest algorithm, which further refines the detection by analyzing texture and size features in real time \cite{IEEE_real_time_detection}. 
 
 The system operates by capturing fruit images from the camera feed, preprocessing the images as described earlier, and passing them through the hybrid CNN-Random Forest model. The output is displayed on the interface, indicating whether the detected fruit is ripe or unripe. This system demonstrates high accuracy and reliability in diverse lighting conditions and fruit varieties, making it suitable for real-world agricultural applications \cite{IEEE_real_world_agriculture}.
+\subsection{Model Evaluation Metrics}
+
+The performance of the CNN and Random Forest hybrid model for fruit ripeness detection was evaluated using commonly used classification metrics, including accuracy, precision, recall, and F1-score.
+
+\paragraph{Precision:} Precision measures the accuracy of the positive predictions made by the model. It is defined as the ratio of true positives (TP) to the sum of true positives and false positives (FP):
+
+\begin{equation}
+    \text{Precision} = \frac{TP}{TP + FP}
+\end{equation}
+
+\paragraph{Recall:} Recall (also known as sensitivity or true positive rate) measures the ability of the model to correctly identify all positive instances. It is calculated as the ratio of true positives to the sum of true positives and false negatives (FN):
+
+\begin{equation}
+    \text{Recall} = \frac{TP}{TP + FN}
+\end{equation}
+
+\paragraph{F1-Score:} The F1-score is the harmonic mean of precision and recall, providing a single metric that balances both. It is particularly useful when the class distribution is imbalanced:
+
+\begin{equation}
+    \text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
+
+\paragraph{Accuracy:} Accuracy represents the proportion of correct predictions (both true positives and true negatives) to the total number of predictions:
+
+\begin{equation}
+    \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $TP$ = True Positives
+    \item $TN$ = True Negatives
+    \item $FP$ = False Positives
+    \item $FN$ = False Negatives
+\end{itemize}
+
+\paragraph{Evaluation:} The model was trained and evaluated using the above metrics, providing a comprehensive assessment of its performance in detecting ripe and unripe fruits.
 
 \subsection{Software and Tools Used}
 The model was implemented entirely using machine learning and deep learning software libraries. Python was the primary programming language, with Keras and TensorFlow used for the CNN model implementation \cite{IEEE_deep_learning_libraries}. Scikit-learn was used for implementing the Random Forest classifier \cite{IEEE_machine_learning_tool}. All experiments were conducted on a machine equipped with an NVIDIA GPU to accelerate the training process, alongside 16GB of RAM and an Intel Core i7 processor \cite{IEEE_software_tools}.
