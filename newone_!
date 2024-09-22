@@ -162,7 +162,7 @@ The CNN model was trained using the Adam optimizer, with an initial learning rat
 
 Training was performed over 50 epochs, and a batch size of 32 was selected after extensive tuning. To ensure the model's generalization ability, 90\% of the dataset was allocated to training, while the remaining 10\% was reserved for testing. The model's performance was evaluated based on several metrics, including accuracy, precision, recall, and F1-score \cite{IEEE_cnn_model_performance}.
 
-The Random Forest classifier was trained in parallel using texture and size features extracted from the images. This classifier was particularly useful in cases where the CNN's color-based predictions were insufficient, especially for fruits that undergo subtle texture changes as they ripen. The combination of both classifiers significantly boosted the overall detection accuracy \cite{IEEE_random_forest_accuracy}.
+The Random Forest classifier was trained in parallel using texture and size features extracted from the images. This classifier was particularly useful in cases where the CNN's color-based predictions were insufficient, especially for fruits that undergo subtle texture changes as they ripen. The combination of both classifiers significantly boosted the overall detection accuracy .
 \subsection{Model Evaluation Metrics}
 
 The performance of the CNN and Random Forest hybrid model for fruit ripeness detection was evaluated using commonly used classification metrics, including accuracy, precision, recall, and F1-score.
